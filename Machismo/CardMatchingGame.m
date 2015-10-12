@@ -38,7 +38,7 @@
 }
 
 static const int MISMATCH_PENALTY = 2;
-static const int MATCH_BONUS = 4;
+static const int MATCH_BONUS = 0;
 static const int COST_TO_CHOSE = 1;
 
 - (Card *)cardAtIndex:(NSUInteger)index {

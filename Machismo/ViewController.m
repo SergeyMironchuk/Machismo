@@ -20,12 +20,24 @@
 
 @implementation ViewController
 
+- (IBAction)resetGame {
+    self.game = nil;
+    [self updateUI];
+}
+
+@synthesize game = _game;
+
 - (CardMatchingGame *)game{
     if (!_game) {
         _game = [[CardMatchingGame alloc] initWithCadrCount:[self.cardButtons count]
                                                   usingDeck:[self createDeck]];
     }
     return _game;
+}
+
+- (void)setGame:(CardMatchingGame *)game
+{
+    _game = game;
 }
 
 -(Deck *)createDeck {
@@ -46,7 +58,8 @@
         [cardButton setTitle:[self titleForCadr:card] forState:UIControlStateNormal];
         [cardButton setBackgroundImage:[self imageForCard:card] forState:UIControlStateNormal];
         cardButton.enabled = !card.isMatched;
-        self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)self.game.score];
+        //self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)self.game.score];
+        self.scoreLabel.text = [[NSString alloc] initWithFormat:@"Score: %ld", (long)self.game.score];
     }
 }
 

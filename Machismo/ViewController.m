@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
 
 @interface ViewController ()
@@ -20,6 +19,13 @@
 
 @implementation ViewController
 
+- (IBAction)resetGame {
+    self.game = nil;
+    [self updateUI];
+}
+
+@synthesize game = _game;
+
 - (CardMatchingGame *)game{
     if (!_game) {
         _game = [[CardMatchingGame alloc] initWithCadrCount:[self.cardButtons count]
@@ -28,8 +34,13 @@
     return _game;
 }
 
+- (void)setGame:(CardMatchingGame *)game
+{
+    _game = game;
+}
+
 -(Deck *)createDeck {
-    return [[PlayingCardDeck alloc] init];
+    return nil; // Abstract
 }
 
 - (IBAction)touchCardButton:(UIButton *)sender {
@@ -46,7 +57,8 @@
         [cardButton setTitle:[self titleForCadr:card] forState:UIControlStateNormal];
         [cardButton setBackgroundImage:[self imageForCard:card] forState:UIControlStateNormal];
         cardButton.enabled = !card.isMatched;
-        self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)self.game.score];
+        //self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)self.game.score];
+        self.scoreLabel.text = [[NSString alloc] initWithFormat:@"Score: %ld", (long)self.game.score];
     }
 }
 

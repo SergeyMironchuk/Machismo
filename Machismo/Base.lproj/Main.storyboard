@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Playing Card View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="PlayingCardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -21,32 +21,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmm-E5-gAm">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="ENY-q3-sZQ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="RHS-GI-ySQ"/>
-                                    <constraint firstAttribute="width" constant="64" id="fuP-HN-Ojs"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="t9B-Io-LPR"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="ENY-q3-sZQ"/>
-                                        <exclude reference="RHS-GI-ySQ"/>
-                                        <exclude reference="fuP-HN-Ojs"/>
-                                        <exclude reference="t9B-Io-LPR"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="ENY-q3-sZQ"/>
-                                        <include reference="RHS-GI-ySQ"/>
-                                        <include reference="fuP-HN-Ojs"/>
-                                        <include reference="t9B-Io-LPR"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="20" width="64" height="96"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FIx-vp-y1O"/>
@@ -54,32 +35,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm1-oZ-YNO">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="BJB-km-Mym"/>
-                                    <constraint firstAttribute="width" constant="64" id="QRb-Dg-65P"/>
-                                    <constraint firstAttribute="height" constant="96" id="Zbx-9l-GGg"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="hYF-CD-WZ2"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="BJB-km-Mym"/>
-                                        <exclude reference="QRb-Dg-65P"/>
-                                        <exclude reference="Zbx-9l-GGg"/>
-                                        <exclude reference="hYF-CD-WZ2"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="BJB-km-Mym"/>
-                                        <include reference="QRb-Dg-65P"/>
-                                        <include reference="Zbx-9l-GGg"/>
-                                        <include reference="hYF-CD-WZ2"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="88" y="20" width="64" height="96"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Kwg-Aq-OSQ"/>
@@ -87,32 +49,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jee-vh-sjX">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="6Yy-o5-Lnk"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="OhR-Sa-oqH"/>
-                                    <constraint firstAttribute="height" constant="96" id="bGs-wA-KMN"/>
-                                    <constraint firstAttribute="width" constant="64" id="iHs-iH-1pe"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="6Yy-o5-Lnk"/>
-                                        <exclude reference="OhR-Sa-oqH"/>
-                                        <exclude reference="bGs-wA-KMN"/>
-                                        <exclude reference="iHs-iH-1pe"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="6Yy-o5-Lnk"/>
-                                        <include reference="OhR-Sa-oqH"/>
-                                        <include reference="bGs-wA-KMN"/>
-                                        <include reference="iHs-iH-1pe"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="160" y="20" width="64" height="96"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UuO-LX-OTy"/>
@@ -120,32 +63,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6e-Y9-arf">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="96" id="29S-1F-DOq"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="L6r-FG-H3q"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="P8k-tE-BwD"/>
-                                    <constraint firstAttribute="width" constant="64" id="oIN-5L-LIK"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="29S-1F-DOq"/>
-                                        <exclude reference="L6r-FG-H3q"/>
-                                        <exclude reference="P8k-tE-BwD"/>
-                                        <exclude reference="oIN-5L-LIK"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="29S-1F-DOq"/>
-                                        <include reference="L6r-FG-H3q"/>
-                                        <include reference="P8k-tE-BwD"/>
-                                        <include reference="oIN-5L-LIK"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="232" y="20" width="64" height="96"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="79F-KE-JYC"/>
@@ -153,32 +77,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfA-CG-uw2">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="8XE-A8-1F9"/>
-                                    <constraint firstAttribute="height" constant="96" id="8aR-RJ-en5"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="Fnh-BX-jUc"/>
-                                    <constraint firstAttribute="width" constant="64" id="OY2-W1-BuI"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="8XE-A8-1F9"/>
-                                        <exclude reference="8aR-RJ-en5"/>
-                                        <exclude reference="Fnh-BX-jUc"/>
-                                        <exclude reference="OY2-W1-BuI"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="8XE-A8-1F9"/>
-                                        <include reference="8aR-RJ-en5"/>
-                                        <include reference="Fnh-BX-jUc"/>
-                                        <include reference="OY2-W1-BuI"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="124" width="64" height="96"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="veU-CS-vcO"/>
@@ -186,32 +91,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ri1-sj-T7Q">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="5vc-GV-VeU"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="Dy1-fA-mv4"/>
-                                    <constraint firstAttribute="height" constant="96" id="L4w-EG-qTa"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="Wzy-K6-EVl"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="5vc-GV-VeU"/>
-                                        <exclude reference="Dy1-fA-mv4"/>
-                                        <exclude reference="L4w-EG-qTa"/>
-                                        <exclude reference="Wzy-K6-EVl"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="5vc-GV-VeU"/>
-                                        <include reference="Dy1-fA-mv4"/>
-                                        <include reference="L4w-EG-qTa"/>
-                                        <include reference="Wzy-K6-EVl"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="88" y="124" width="64" height="96"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZYA-TD-gdh"/>
@@ -219,32 +105,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxg-gv-U3y">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="2DK-WG-Mzb"/>
-                                    <constraint firstAttribute="width" constant="64" id="OXz-IK-1YY"/>
-                                    <constraint firstAttribute="height" constant="96" id="mXw-OJ-C2E"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="pkj-n6-h45"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="2DK-WG-Mzb"/>
-                                        <exclude reference="OXz-IK-1YY"/>
-                                        <exclude reference="mXw-OJ-C2E"/>
-                                        <exclude reference="pkj-n6-h45"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="2DK-WG-Mzb"/>
-                                        <include reference="OXz-IK-1YY"/>
-                                        <include reference="mXw-OJ-C2E"/>
-                                        <include reference="pkj-n6-h45"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="160" y="124" width="64" height="96"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bg2-cw-AWo"/>
@@ -252,32 +119,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJ6-bK-GWn">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="G7J-s4-cH1"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="Owj-sM-o4o"/>
-                                    <constraint firstAttribute="height" constant="96" id="i5J-JQ-NuF"/>
-                                    <constraint firstAttribute="width" constant="64" id="z4b-6E-KuB"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="G7J-s4-cH1"/>
-                                        <exclude reference="Owj-sM-o4o"/>
-                                        <exclude reference="i5J-JQ-NuF"/>
-                                        <exclude reference="z4b-6E-KuB"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="G7J-s4-cH1"/>
-                                        <include reference="Owj-sM-o4o"/>
-                                        <include reference="i5J-JQ-NuF"/>
-                                        <include reference="z4b-6E-KuB"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="232" y="124" width="64" height="96"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="h68-b6-yRh"/>
@@ -285,32 +133,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQf-tk-vKv">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="5Mj-Kn-NV6"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="Di3-wC-a61"/>
-                                    <constraint firstAttribute="height" constant="96" id="QmB-7u-YBw"/>
-                                    <constraint firstAttribute="width" constant="64" id="cLs-Oq-axy"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="5Mj-Kn-NV6"/>
-                                        <exclude reference="Di3-wC-a61"/>
-                                        <exclude reference="QmB-7u-YBw"/>
-                                        <exclude reference="cLs-Oq-axy"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="5Mj-Kn-NV6"/>
-                                        <include reference="Di3-wC-a61"/>
-                                        <include reference="QmB-7u-YBw"/>
-                                        <include reference="cLs-Oq-axy"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="228" width="64" height="96"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="n7J-fr-VGU"/>
@@ -318,32 +147,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuT-i1-hP7">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="JPI-PJ-mbq"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="PYf-k6-kTc"/>
-                                    <constraint firstAttribute="height" constant="96" id="XPI-eG-fa4"/>
-                                    <constraint firstAttribute="width" constant="64" id="rTy-V5-VZg"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="JPI-PJ-mbq"/>
-                                        <exclude reference="PYf-k6-kTc"/>
-                                        <exclude reference="XPI-eG-fa4"/>
-                                        <exclude reference="rTy-V5-VZg"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="JPI-PJ-mbq"/>
-                                        <include reference="PYf-k6-kTc"/>
-                                        <include reference="XPI-eG-fa4"/>
-                                        <include reference="rTy-V5-VZg"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="88" y="228" width="64" height="96"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="a1h-SS-Aw8"/>
@@ -351,32 +161,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2K-QS-Zqh">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="3aH-ZN-wds"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="76I-e1-N6d"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="Gmd-FI-QG4"/>
-                                    <constraint firstAttribute="height" constant="96" id="gAk-PA-zre"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="3aH-ZN-wds"/>
-                                        <exclude reference="76I-e1-N6d"/>
-                                        <exclude reference="Gmd-FI-QG4"/>
-                                        <exclude reference="gAk-PA-zre"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="3aH-ZN-wds"/>
-                                        <include reference="76I-e1-N6d"/>
-                                        <include reference="Gmd-FI-QG4"/>
-                                        <include reference="gAk-PA-zre"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="232" y="228" width="64" height="96"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4v2-hJ-f3C"/>
@@ -384,32 +175,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vw4-r2-rZv">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="2LX-4H-DQJ"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="8sm-iM-ZCt"/>
-                                    <constraint firstAttribute="height" constant="96" id="AAZ-r9-ff9"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="r05-JQ-hXp"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" backgroundImage="cardback">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="2LX-4H-DQJ"/>
-                                        <exclude reference="8sm-iM-ZCt"/>
-                                        <exclude reference="AAZ-r9-ff9"/>
-                                        <exclude reference="r05-JQ-hXp"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="2LX-4H-DQJ"/>
-                                        <include reference="8sm-iM-ZCt"/>
-                                        <include reference="AAZ-r9-ff9"/>
-                                        <include reference="r05-JQ-hXp"/>
-                                    </mask>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="160" y="228" width="64" height="96"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RfM-9D-k3J"/>
@@ -421,36 +193,43 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="HJJ-Lb-0hD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="ZDy-Tl-69g"/>
+                                </constraints>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZDy-Tl-69g"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-23" y="-15" width="116" height="95"/>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ZDy-Tl-69g"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="resetGame" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ze8-Zd-glp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="eQf-tk-vKv" firstAttribute="top" secondItem="ZuT-i1-hP7" secondAttribute="top" id="02h-uN-Pjx"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0Uz-kP-T2D" secondAttribute="bottom" constant="8" symbolic="YES" id="2K8-EG-vv9"/>
-                            <constraint firstItem="UJ6-bK-GWn" firstAttribute="leading" secondItem="i6e-Y9-arf" secondAttribute="leading" id="3Gr-Cy-Sd3"/>
-                            <constraint firstItem="Ri1-sj-T7Q" firstAttribute="top" secondItem="YfA-CG-uw2" secondAttribute="top" id="5FI-mQ-BuI"/>
-                            <constraint firstItem="Ri1-sj-T7Q" firstAttribute="top" secondItem="UJ6-bK-GWn" secondAttribute="top" id="72S-ON-3fc"/>
-                            <constraint firstItem="Ri1-sj-T7Q" firstAttribute="leading" secondItem="YfA-CG-uw2" secondAttribute="trailing" constant="8" symbolic="YES" id="DdG-7O-YhX"/>
-                            <constraint firstItem="UJ6-bK-GWn" firstAttribute="leading" secondItem="h2K-QS-Zqh" secondAttribute="leading" id="L4L-qw-OAp"/>
-                            <constraint firstItem="eQf-tk-vKv" firstAttribute="top" secondItem="vw4-r2-rZv" secondAttribute="top" id="OYW-nx-r3H"/>
-                            <constraint firstItem="Ri1-sj-T7Q" firstAttribute="leading" secondItem="Gm1-oZ-YNO" secondAttribute="leading" id="PAk-qf-VC6"/>
-                            <constraint firstItem="Jee-vh-sjX" firstAttribute="leading" secondItem="Gm1-oZ-YNO" secondAttribute="trailing" constant="8" symbolic="YES" id="PiM-my-52c"/>
-                            <constraint firstItem="Gxg-gv-U3y" firstAttribute="top" secondItem="Jee-vh-sjX" secondAttribute="bottom" constant="8" symbolic="YES" id="SeT-vS-18A"/>
-                            <constraint firstItem="Jee-vh-sjX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="160" id="TNJ-BD-Itm"/>
-                            <constraint firstItem="Jee-vh-sjX" firstAttribute="top" secondItem="i6e-Y9-arf" secondAttribute="top" id="WDB-Hq-Qfh"/>
-                            <constraint firstItem="zmm-E5-gAm" firstAttribute="leading" secondItem="0Uz-kP-T2D" secondAttribute="leading" id="YQA-vc-A22"/>
-                            <constraint firstItem="Jee-vh-sjX" firstAttribute="top" secondItem="Gm1-oZ-YNO" secondAttribute="top" id="YlG-hV-GaP"/>
-                            <constraint firstItem="Ri1-sj-T7Q" firstAttribute="leading" secondItem="ZuT-i1-hP7" secondAttribute="leading" id="aj0-RO-jf9"/>
-                            <constraint firstItem="zmm-E5-gAm" firstAttribute="leading" secondItem="eQf-tk-vKv" secondAttribute="leading" id="cj9-IZ-8Ug"/>
-                            <constraint firstItem="Jee-vh-sjX" firstAttribute="top" secondItem="zmm-E5-gAm" secondAttribute="top" id="ddT-j1-acU"/>
-                            <constraint firstItem="0Uz-kP-T2D" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="f18-gY-XxP"/>
-                            <constraint firstItem="Jee-vh-sjX" firstAttribute="leading" secondItem="vw4-r2-rZv" secondAttribute="leading" id="gzU-mt-2XO"/>
-                            <constraint firstItem="Jee-vh-sjX" firstAttribute="leading" secondItem="Gxg-gv-U3y" secondAttribute="leading" id="hJa-ZB-uz9"/>
-                            <constraint firstItem="i6e-Y9-arf" firstAttribute="leading" secondItem="Jee-vh-sjX" secondAttribute="trailing" constant="8" symbolic="YES" id="iyo-rD-qhU"/>
-                            <constraint firstItem="Jee-vh-sjX" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="kLW-SQ-EhB"/>
-                            <constraint firstItem="ZuT-i1-hP7" firstAttribute="top" secondItem="Ri1-sj-T7Q" secondAttribute="bottom" constant="8" symbolic="YES" id="l61-qr-iOM"/>
-                            <constraint firstItem="h2K-QS-Zqh" firstAttribute="top" secondItem="UJ6-bK-GWn" secondAttribute="bottom" constant="8" symbolic="YES" id="lnP-6o-NQ4"/>
-                            <constraint firstItem="Ri1-sj-T7Q" firstAttribute="top" secondItem="Gxg-gv-U3y" secondAttribute="top" id="om5-lh-UZn"/>
-                            <constraint firstItem="zmm-E5-gAm" firstAttribute="leading" secondItem="YfA-CG-uw2" secondAttribute="leading" id="rNO-6D-YGF"/>
+                            <constraint firstItem="HJJ-Lb-0hD" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="EA7-0v-yPL"/>
+                            <constraint firstItem="HJJ-Lb-0hD" firstAttribute="leading" secondItem="0Uz-kP-T2D" secondAttribute="trailing" constant="16" id="e4r-cf-FOb">
+                                <variation key="widthClass=compact" constant="93"/>
+                            </constraint>
+                            <constraint firstItem="0Uz-kP-T2D" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="lBK-xv-mwG"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0Uz-kP-T2D" secondAttribute="bottom" constant="8" id="pKt-Oj-nNh"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="HJJ-Lb-0hD" secondAttribute="bottom" constant="8" id="waM-ES-h9y">
+                                <variation key="widthClass=compact" constant="3"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -513,6 +292,7 @@
                                 <include reference="h2K-QS-Zqh"/>
                                 <include reference="vw4-r2-rZv"/>
                                 <include reference="0Uz-kP-T2D"/>
+                                <include reference="HJJ-Lb-0hD"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="f18-gY-XxP"/>
@@ -563,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="543" y="366"/>
+            <point key="canvasLocation" x="426" y="328"/>
         </scene>
     </scenes>
     <resources>

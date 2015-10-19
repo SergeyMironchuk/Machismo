@@ -9,8 +9,10 @@
 #import "CardMatchingGame.h"
 
 @interface CardMatchingGame()
+
 @property (nonatomic, readwrite) NSInteger score;
 @property (nonatomic, strong) NSMutableArray *cards; //	of Card
+
 @end
 
 @implementation CardMatchingGame
@@ -24,7 +26,7 @@
                         usingDeck:(Deck *)deck {
     self = [super init]; // назначенный инициализатор супер класса
     if (self) {
-        for (int i; i < count; i++) {
+        for (int i = 0; i < count; i++) {
             Card *card = [deck drawRandomCard];
             if (card) {
                 [self.cards addObject:card];
@@ -38,7 +40,7 @@
 }
 
 static const int MISMATCH_PENALTY = 2;
-static const int MATCH_BONUS = 0;
+static const int MATCH_BONUS = 4;
 static const int COST_TO_CHOSE = 1;
 
 - (Card *)cardAtIndex:(NSUInteger)index {

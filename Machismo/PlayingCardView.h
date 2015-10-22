@@ -13,11 +13,8 @@
 @property (nonatomic) NSUInteger rank;
 @property(nonatomic, strong) NSString *suit;
 @property(nonatomic) BOOL faceUp;
-<<<<<<< HEAD
 @property(nonatomic) CGFloat faceCardScaleFactor;
 @property(nonatomic) BOOL enabled;
 
 - (void)pinch:(UIPinchGestureRecognizer *) gesture;
-=======
->>>>>>> origin/master
 @end

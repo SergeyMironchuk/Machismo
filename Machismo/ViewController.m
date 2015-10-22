@@ -41,7 +41,7 @@
     _game = game;
 }
 - (IBAction)tapCardButton:(UITapGestureRecognizer *)sender {
-    NSUInteger cardIndex = [self.cardButtons indexOfObject:sender.];
+    NSUInteger cardIndex = [self.cardButtons indexOfObject:sender.view];
     [self.game choseCardAtIndex:cardIndex];
     [self updateUI];
 }
@@ -51,25 +51,23 @@
     for (PlayingCardView *cardButton in self.cardButtons) {
         NSUInteger cardIndex = [self.cardButtons indexOfObject:cardButton];
         PlayingCard *card = (PlayingCard *)[self.game cardAtIndex:cardIndex];
-        //[cardButton setTitle:[self titleForCadr:card] forState:UIControlStateNormal];
-        //[cardButton setBackgroundImage:[self imageForCard:card] forState:UIControlStateNormal];
         cardButton.rank = card.rank;
         cardButton.suit = card.suit;
-        cardButton.faceUp = card.isChosen ? YES : NO;
+        BOOL newFaceUp = card.isChosen ? YES : NO;
+        if (cardButton.faceUp != newFaceUp) {
+            [UIView transitionWithView:cardButton
+                              duration:0.5
+                               options:UIViewAnimationOptionTransitionFlipFromLeft
+                            animations:^{
+                                cardButton.faceUp = newFaceUp;
+                            }
+                            completion:NULL];
+
+        }
         cardButton.enabled = !card.isMatched;
         //self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)self.game.score];
         self.scoreLabel.text = [[NSString alloc] initWithFormat:@"Score: %ld", (long)self.game.score];
     }
 }
-
-//- (NSString *)titleForCadr:(Card *)card
-//{
-//    return card.isChosen ? card.contents : @"";
-//}
-//
-//- (UIImage *)imageForCard:(Card *)card
-//{
-//    return [UIImage imageNamed:card.isChosen ? @"cardfront" : @"cardback"];
-//}
 
 @end

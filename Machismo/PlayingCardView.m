@@ -10,6 +10,7 @@
 
 @implementation PlayingCardView
 
+<<<<<<< HEAD
 #pragma mark - Initialization
 
 - (void)setup
@@ -46,12 +47,17 @@
 
 #pragma mark - Drawing
 
+=======
+>>>>>>> origin/master
 #define CORNER_FOR_STANDARD_HEIGH 180.0
 #define CORNER_RADIUS 12.0
 
 - (CGFloat)cornerScaleFactor { return self.bounds.size.height / CORNER_FOR_STANDARD_HEIGH; }
 - (CGFloat)cornerRadius {return CORNER_RADIUS * [self cornerScaleFactor]; }
+<<<<<<< HEAD
 - (CGFloat)cornerOffset {return [self cornerRadius] / 3.0;}
+=======
+>>>>>>> origin/master
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -61,6 +67,7 @@
                                                           cornerRadius:[self cornerRadius]];
     [roundedRec addClip];
     [[UIColor whiteColor] setFill];
+<<<<<<< HEAD
     UIRectFill(self.bounds);    // draw
     [[UIColor blackColor] setStroke];
     [roundedRec stroke];        // draw
@@ -215,6 +222,18 @@
 {
     _faceCardScaleFactor = faceCardScaleFactor;
     [self setNeedsDisplay];
+=======
+    UIRectFill(self.bounds);
+}
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        
+    }
+    return self;
+>>>>>>> origin/master
 }
 
 - (void)setRank:(NSUInteger)rank
@@ -235,5 +254,8 @@
     _faceUp = faceUp;
     [self setNeedsDisplay];
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 @end

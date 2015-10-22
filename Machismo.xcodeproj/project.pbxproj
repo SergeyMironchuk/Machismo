@@ -20,6 +20,7 @@
 		84622B251B8704E70079A28D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84622B241B8704E70079A28D /* Images.xcassets */; };
 		84622B281B8704E70079A28D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84622B261B8704E70079A28D /* LaunchScreen.xib */; };
 		84622B341B8704E70079A28D /* MachismoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84622B331B8704E70079A28D /* MachismoTests.m */; };
+		84C500F91BD7C391001A03B5 /* PlayingCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C500F81BD7C391001A03B5 /* PlayingCardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		84622B2D1B8704E70079A28D /* MachismoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MachismoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84622B321B8704E70079A28D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84622B331B8704E70079A28D /* MachismoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MachismoTests.m; sourceTree = "<group>"; };
+		84C500F71BD7C391001A03B5 /* PlayingCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardView.h; sourceTree = "<group>"; };
+		84C500F81BD7C391001A03B5 /* PlayingCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				84622B241B8704E70079A28D /* Images.xcassets */,
 				84622B261B8704E70079A28D /* LaunchScreen.xib */,
 				84622B171B8704E70079A28D /* Supporting Files */,
+				84C500F71BD7C391001A03B5 /* PlayingCardView.h */,
+				84C500F81BD7C391001A03B5 /* PlayingCardView.m */,
 			);
 			path = Machismo;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				8424CE4D1B8C79AF0044A068 /* PlayingCardDeck.m in Sources */,
 				84622B1A1B8704E70079A28D /* main.m in Sources */,
 				845E04731B8762B0004A864C /* Card.m in Sources */,
+				84C500F91BD7C391001A03B5 /* PlayingCardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

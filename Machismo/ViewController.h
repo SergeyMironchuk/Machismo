@@ -8,11 +8,11 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#import "CardMatchingGame.h"
 #import "Deck.h"
 
 @interface ViewController : UIViewController
-
--(Deck *)createDeck;    // Abstract
 
 @end
 

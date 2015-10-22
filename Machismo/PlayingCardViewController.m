@@ -8,20 +8,58 @@
 
 #import "PlayingCardViewController.h"
 #import "PlayingCardDeck.h"
+#import "PlayingCardView.h"
+#import "PlayingCard.h"
 
 @interface PlayingCardViewController ()
+@property (weak, nonatomic) IBOutlet PlayingCardView *playingCardView;
+@property (nonatomic, strong) Deck *deckForAnimateAllCards;
 
 @end
 
 @implementation PlayingCardViewController
+- (IBAction)swipe:(UISwipeGestureRecognizer *)sender {
+    BOOL cardExists = YES;
+    if (!self.playingCardView.faceUp) {
+        cardExists = [self drawRandomPlayingCard];
+    }
+    if (cardExists) {
+        
+        [UIView transitionWithView:self.playingCardView
+                          duration:0.5
+                           options:UIViewAnimationOptionTransitionFlipFromLeft
+                        animations:^{
+                               self.playingCardView.faceUp = !self.playingCardView.faceUp;
+                        }
+                        completion:NULL];
+    }
+}
 
--(Deck *)createDeck {
-    return [[PlayingCardDeck alloc] init];
+- (Deck *)deckForAnimateAllCards
+{
+    if(!_deckForAnimateAllCards) _deckForAnimateAllCards = [[PlayingCardDeck alloc] init];
+    return _deckForAnimateAllCards;
+}
+
+- (BOOL)drawRandomPlayingCard
+{
+    Card *card = [self.deckForAnimateAllCards drawRandomCard];
+    if ([card isKindOfClass:[PlayingCard class]]) {
+        PlayingCard *playingCard = (PlayingCard *)card;
+        self.playingCardView.rank = playingCard.rank;
+        self.playingCardView.suit = playingCard.suit;
+        return YES;
+    }
+    return NO;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.playingCardView addGestureRecognizer:[[UIPinchGestureRecognizer alloc]
+                                                initWithTarget:self.playingCardView
+                                                action:@selector(pinch:)]];
 }
 
 - (void)didReceiveMemoryWarning {
